@@ -7,7 +7,7 @@ if(getToken == null){
 
 function fetchLogedName() {
     // debugger
-    fetch('http://localhost:8080/api/username', {
+    fetch(stepwayApi('/api/username'), {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${getToken}`,

@@ -7,7 +7,7 @@
 
     teacherAllCoursesData();
 function teacherAllCoursesData() {
-    fetch('http://localhost:8080/api/courses', {
+    fetch(stepwayApi('/api/courses'), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -75,7 +75,7 @@ function teacherAllCoursesData() {
 }
 
 function fetchAssessmentDataAndRedirect(courseId) {
-    fetch(`http://localhost:8080/api/allAssessments/${courseId}`, {
+    fetch(stepwayApi(`/api/allAssessments/${courseId}`), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

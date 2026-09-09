@@ -8,7 +8,7 @@ if(getToken == null){
 
 allCoursesData();
 function allCoursesData() {
-    fetch(`http://localhost:8080/api/studentCertification`, {
+    fetch(stepwayApi(`/api/studentCertification`), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -48,7 +48,7 @@ function allCoursesData() {
     
 function fetchStudentCertificationCount() {
     // debugger
-    fetch('http://localhost:8080/api/countCurrentUserCertificates',{
+    fetch(stepwayApi('/api/countCurrentUserCertificates'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

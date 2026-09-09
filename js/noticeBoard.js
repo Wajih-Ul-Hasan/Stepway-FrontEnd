@@ -6,7 +6,7 @@ if(getToken == null){
 
 
 
-        fetch('http://localhost:8080/api/allNotices' ,{
+        fetch(stepwayApi('/api/allNotices') ,{
             method: 'GET',
                 headers: {
                     'Content-Type': 'application/json', // Example: Sending JSON data
@@ -59,7 +59,7 @@ function saveNotice() {
     const jsonData = JSON.stringify(noticeData);
 
     // Fetch API to send data to the backend
-    fetch('http://localhost:8080/api/noticeboard', {
+    fetch(stepwayApi('/api/noticeboard'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

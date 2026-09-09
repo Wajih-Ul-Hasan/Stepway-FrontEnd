@@ -32,7 +32,7 @@ function saveTeacher() {
     const jsonData = JSON.stringify(newStudent);
 
     // Fetch API to send data to the backend
-    fetch('http://localhost:8080/api/user', {
+    fetch(stepwayApi('/api/user'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

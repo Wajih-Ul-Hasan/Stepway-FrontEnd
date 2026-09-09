@@ -13,7 +13,7 @@ const pageSize = 10;
 
 
 function allCoursesData(pageNumber = currentPageNumber) {
-    fetch(`http://localhost:8080/api/allCourses?pageNumber=${pageNumber}`, {
+    fetch(stepwayApi(`/api/allCourses?pageNumber=${pageNumber}`), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -98,7 +98,7 @@ allCoursesData();
 
 allCoursesForTeacher();
 function allCoursesForTeacher() {
-    fetch('http://localhost:8080/api/courses', {
+    fetch(stepwayApi('/api/courses'), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

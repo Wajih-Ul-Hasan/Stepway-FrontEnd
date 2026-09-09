@@ -1,62 +1,32 @@
-
-
-function login() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    
-    var data = {
-        "email": username,
-        "password": password
-    };
-
-    fetch('http://localhost:8080/api/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json()
-    )
-    .then(data => {
-        var token = data.accessToken;
-        localStorage.setItem("token",token)
-
-        if(token){
-            var userId = token.id;
-            var a = parseJwt(token);
-            debugger
-            const roles = a.ROLES;
-
-            if (roles[0] === "ADMIN") {
-                // Render AdminDashboard.html
-                window.location.href = 'AdminDashboard.html';
-              } else if (roles.includes("STUDENT")) {
-                window.location.href = 'StudentDashboard.html';
-              }else if(roles.includes("TEACHER")){
-                window.location.href = 'TeacherDashboard.html';
-            }else{
-                console.log('User Not Found');
-            }
-        }
-        else{
-            console.log("Token Not Found");
-        }
-        console.log(token);
-        // You can save the token in local storage or as needed
-        // Redirect to index1.html
-        
-    })
-    .catch(error => {
-        alert("Login failed. Please check your credentials.");
-    });
+async function login() {
+    try {
+        const response = await fetch(stepwayApi('/api/login'), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            })
+        });
+        if (!response.ok) throw new Error('Login failed');
+        const data = await response.json();
+        if (typeof data.accessToken !== 'string') throw new Error('Missing token');
+        const roles = parseJwt(data.accessToken).ROLES || [];
+        const page = roles.includes('ADMIN') ? 'AdminDashboard.html'
+            : roles.includes('STUDENT') ? 'StudentDashboard.html'
+            : roles.includes('TEACHER') ? 'TeacherDashboard.html' : null;
+        if (!page) throw new Error('No supported role');
+        localStorage.setItem('token', data.accessToken);
+        window.location.href = page;
+    } catch (error) {
+        localStorage.removeItem('token');
+        alert('Login failed. Please check your credentials and try again.');
+    }
 }
 
-function parseJwt (token) {
-
-    var base64Url = token.split('.')[1];
-    var base64 = decodeURIComponent(atob(base64Url).split('').map((c)=>{
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-    return JSON.parse(base64);
-};
+function parseJwt(token) {
+    let base64 = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+    base64 = base64.padEnd(Math.ceil(base64.length / 4) * 4, '=');
+    return JSON.parse(decodeURIComponent(Array.from(atob(base64),
+        c => '%' + c.charCodeAt(0).toString(16).padStart(2, '0')).join('')));
+}

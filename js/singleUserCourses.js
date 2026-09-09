@@ -9,7 +9,7 @@ if(getToken == null){
 
 allCoursesData();
 function allCoursesData() {
-    fetch('http://localhost:8080/api/courses', {
+    fetch(stepwayApi('/api/courses'), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -79,7 +79,7 @@ function allCoursesData() {
 }
 
 function fetchAssessmentDataAndRedirect(courseId) {
-    fetch(`http://localhost:8080/api/allAssessments/${courseId}`, {
+    fetch(stepwayApi(`/api/allAssessments/${courseId}`), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -137,7 +137,7 @@ function fetchAssessmentDataAndRedirect(courseId) {
 
 function fetchStudentEnrolledCoursesCount() {
     // debugger
-    fetch('http://localhost:8080/api/countCurrentUserEnrolledCourses',{
+    fetch(stepwayApi('/api/countCurrentUserEnrolledCourses'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

@@ -17,7 +17,7 @@ function submitForm(){
         "phoneNumber": phonenumber,
         "role": role
     };debugger
-    fetch('http://localhost:8080/api/user', {
+    fetch(stepwayApi('/api/user'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

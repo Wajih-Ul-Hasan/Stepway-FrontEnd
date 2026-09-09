@@ -1,4 +1,4 @@
-// const apiUrl = process.env.STEPWAY_APP_API_URL;
+
 
 var getToken = localStorage.getItem("token")
 // debugger
@@ -34,7 +34,7 @@ function saveCourse() {
     const jsonData = JSON.stringify(newCourse);
 
     // Fetch API to send data to the backend
-    fetch(`http://localhost:8080/api/course`, {
+    fetch(stepwayApi(`/api/course`), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

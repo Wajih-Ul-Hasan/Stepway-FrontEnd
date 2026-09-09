@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: stepway-frontend
+    runtime: static
+    buildCommand: node scripts/build.mjs
+    staticPublishPath: ./public
+    envVars:
+      - key: STEPWAY_API_BASE_URL
+        sync: false
+    headers:
+      - path: /js/config.js
+        name: Cache-Control
+        value: no-store
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin

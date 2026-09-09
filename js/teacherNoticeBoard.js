@@ -6,7 +6,7 @@ if(getToken == null){
 
 
 
-        fetch('http://localhost:8080/api/allNotices' ,{
+        fetch(stepwayApi('/api/allNotices') ,{
             method: 'GET',
                 headers: {
                     'Content-Type': 'application/json', // Example: Sending JSON data

@@ -8,7 +8,7 @@ if(getToken == null){
 
 
 // New js file with data fetched from a backend API with headers and method
-const apiUrl = "http://localhost:8080/api/allCourses"; // Replace with your actual API endpoint
+const apiUrl = stepwayApi("/api/allCourses"); // Replace with your actual API endpoint
 
 // Function to fetch course data from the API
 async function fetchCourses() {
@@ -108,7 +108,7 @@ async function openPopup(index) {
 
 allAvalableCoursesForEnrollment();
 function allAvalableCoursesForEnrollment() {
-    fetch(`http://localhost:8080/api/enrollcourses`, {
+    fetch(stepwayApi(`/api/enrollcourses`), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -167,7 +167,7 @@ function handleRegisterCourse(event) {
     };
 
     // Send the POST request
-    fetch(`http://localhost:8080/api/available-enrollment`, {
+    fetch(stepwayApi(`/api/available-enrollment`), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

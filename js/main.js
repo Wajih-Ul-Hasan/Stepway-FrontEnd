@@ -182,7 +182,7 @@
 
         
         function top5CoursesNames() {
-          fetch('http://localhost:8080/api/getTopEnrolledCourses',{
+          fetch(stepwayApi('/api/getTopEnrolledCourses'),{
               
               headers: {
                   'Content-Type': 'application/json', // Example: Sending JSON data
@@ -210,7 +210,7 @@
       top5CoursesNames();
 
       function top5CoursesCount() {
-        fetch('http://localhost:8080/api/enrollment/count',{
+        fetch(stepwayApi('/api/enrollment/count'),{
             
             headers: {
                 'Content-Type': 'application/json', // Example: Sending JSON data

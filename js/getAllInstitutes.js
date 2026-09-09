@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     
     function allInstituteData(pageNumber = currentPageNumber) {
-        fetch(`http://localhost:8080/api/allInstitute?pageNumber=${pageNumber}`, {
+        fetch(stepwayApi(`/api/allInstitute?pageNumber=${pageNumber}`), {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json', // Example: Sending JSON data

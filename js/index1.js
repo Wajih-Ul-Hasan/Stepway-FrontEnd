@@ -7,7 +7,7 @@ if(getToken == null){
 
 function fetchStudentCount() {
     // debugger
-    fetch('http://localhost:8080/api/count',{
+    fetch(stepwayApi('/api/count'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -35,7 +35,7 @@ fetchStudentCount();
 
 function fetchTeacherCount() {
     // debugger
-    fetch('http://localhost:8080/api/countTeachers',{
+    fetch(stepwayApi('/api/countTeachers'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -61,7 +61,7 @@ fetchTeacherCount();
 
 function fetchCoursesCount() {
     // debugger
-    fetch('http://localhost:8080/api/totalCourses',{
+    fetch(stepwayApi('/api/totalCourses'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -87,7 +87,7 @@ fetchCoursesCount();
 
 
 function fetchTotalEarning() {
-    fetch('http://localhost:8080/api/earning',{
+    fetch(stepwayApi('/api/earning'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -113,7 +113,7 @@ fetchTotalEarning();
 
 
 function fetchFemaleStudents() {
-    fetch('http://localhost:8080/api/femaleStudents',{
+    fetch(stepwayApi('/api/femaleStudents'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -139,7 +139,7 @@ fetchFemaleStudents();
 
 
 function fetchMaleStudents() {
-    fetch('http://localhost:8080/api/maleStudents',{
+    fetch(stepwayApi('/api/maleStudents'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -167,7 +167,7 @@ fetchMaleStudents();
 
 
 function certificationCount() {
-    fetch('http://localhost:8080/api/countTotalCertifications',{
+    fetch(stepwayApi('/api/countTotalCertifications'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data
@@ -194,7 +194,7 @@ certificationCount();
 
 
 function totalRegistrations() {
-    fetch('http://localhost:8080/api/countTotalEnrollments',{
+    fetch(stepwayApi('/api/countTotalEnrollments'),{
         
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

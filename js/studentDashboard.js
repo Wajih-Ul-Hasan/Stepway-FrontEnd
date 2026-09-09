@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     allCoursesData();
     function allCoursesData() {
-        fetch('http://localhost:8080/api/courses', {
+        fetch(stepwayApi('/api/courses'), {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json', // Example: Sending JSON data

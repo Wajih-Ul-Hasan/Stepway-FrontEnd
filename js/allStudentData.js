@@ -10,7 +10,7 @@ const pageSize = 10;
 
 
 function allStudentData(pageNumber = currentPageNumber) {
-    fetch(`http://localhost:8080/api/students?pageNumber=${pageNumber}`, {
+    fetch(stepwayApi(`/api/students?pageNumber=${pageNumber}`), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json', // Example: Sending JSON data

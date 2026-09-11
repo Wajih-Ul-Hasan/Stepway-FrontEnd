@@ -1,6 +1,6 @@
 # Stepway frontend
 
-Static HTML/CSS/JavaScript. Node 22 is used only to prepare and check the deployment; there are no npm dependencies.
+Static HTML/CSS/JavaScript. Node 22 is used only to prepare and check the deployment; there are no runtime npm dependencies. Playwright is a development-only dependency for browser verification.
 
 ## Deploy on Render
 
@@ -41,3 +41,33 @@ This checks JavaScript syntax, configuration order in every root HTML page, API 
 Log in as admin, create a teacher and student, create a course, log in as the student and enroll, then publish a notice as admin and check it as the student. Check the browser Network panel for failed API calls. Existing template-only pages are not a guarantee of implemented backend functionality.
 
 Reference: https://render.com/docs/static-sites
+
+
+## Revamped learning workspace
+
+The landing page, sign-in, registration, role dashboards, course catalog and student/teacher notice pages now share a responsive visual system. Existing administrative pages receive the shared theme and a return-to-workspace link. Legacy filenames remain usable; `workspace.html` is the shared entry point after sign-in.
+
+New capabilities:
+
+- A persistent personal learning board: planned, in progress and completed goals.
+- Skill focus, target dates, overdue indicators and evidence links.
+- Progress counters calculated from saved goals, plus browser print / Save as PDF.
+- Search across loaded course cards, load-more pagination, enrollment states, assessments and resource links.
+- Explicit loading, empty, validation, unavailable and expired-session states.
+
+No new hosting variables are needed. Deploy the updated backend first so `/api/me/goals` is available, then deploy this frontend using the existing build command. If that API is unavailable, the board displays an error; it does not invent progress data. The new `learning_goal` database table is additive.
+
+## Reproducible browser checks
+
+```powershell
+npm ci
+npx playwright-core install chromium
+npm test
+npm run test:browser
+```
+
+The browser check starts a local static server and intercepts API calls with test fixtures. It checks registration, sign-in, goal creation/deletion/status changes, state after reload, enrollment, course resources, filtering, role controls and mobile overflow. Screenshots are written to ignored `artifacts/`. This is not a live Railway/MySQL integration test. CI installs Chromium and runs both checks.
+
+To use an already installed Chrome instead, set `CHROME_PATH` to its executable path before running the browser check.
+
+For an MS application demonstration, explain the progress-tracking gap in the original report, show the working flow and its ownership tests, and discuss the tradeoffs. The backend repository contains `docs/ENGINEERING_CASE_STUDY.md` with report traceability and limitations. Progress is self-reported and must not be presented as an institution-verified qualification.

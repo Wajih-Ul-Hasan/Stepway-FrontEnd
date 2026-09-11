@@ -1,0 +1,14 @@
+{
+  "name": "stepway-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Stepway UI with development-only verification tools",
+  "scripts": {
+    "test": "node scripts/check.mjs",
+    "test:browser": "node scripts/browser-check.cjs",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

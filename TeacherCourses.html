@@ -1,206 +1,196 @@
 <!doctype html>
-<html class="no-js" lang="">
-
-
-<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/all-class.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Oct 2023 17:31:02 GMT -->
+<html lang="en">
 <head>
-    <script src="js/config.js"></script>
-    <script src="js/api-config.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>STEPWAY | My Courses</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="fonts/flaticon.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
-    <!-- Data Table CSS -->
-    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Modernize js -->
-    <script src="js/index1.js"></script>
-    <script src="js/loginUserName.js"></script>
-    <script src="js/singleUserCourses.js"></script>
-    <script src="js/allCoursesData.js"></script>
-    <script src="js/teacher.js"></script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#235e46">
+<title>Your workspace · Stepway</title>
+<script src="js/config.js">
+</script>
+<script src="js/api-config.js">
+</script>
+<link rel="stylesheet" href="css/stepway.css">
 </head>
-
-<body>
-    <!-- Preloader Start Here -->
-    <div id="preloader"></div>
-    <!-- Preloader End Here -->
-    <div id="wrapper" class="wrapper bg-ash">
-         <!-- Header Menu Area Start Here -->
-        <div class="navbar navbar-expand-md header-menu-one bg-light">
-            <div class="nav-bar-header-one"   style="width:70px; height: 70px;">
-                <div class="header-logo">
-                    <a href="TeacherDashboard.html">
-                        <!--img-properties--> <img src="img/Stepway-logo.png" alt="logo" style="margin-left: 5px; width:185px; height: 150px;">
-                     </a>
-                </div>
-                  <div class="toggle-button sidebar-toggle">
-                    <button type="button" class="item-link">
-                        <span class="btn-icon-wrap">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <div class="d-md-none mobile-nav-bar">
-               <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
-                    <i class="far fa-arrow-alt-circle-down"></i>
-                </button>
-                <button type="button" class="navbar-toggler sidebar-toggle-mobile">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            <div class="header-main-menu collapse navbar-collapse" id="mobile-navbar">
-                <ul class="navbar-nav">
-                    
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="navbar-item dropdown header-admin">
-                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">
-                            <div class="admin-title">
-                                <h5 class="item-title" id="UserName"></h5>
-                                <span>Teacher</span>
-                            </div>
-                            <div class="admin-img">
-                                <img src="img/figure/admin.jpg" alt="Teacher">
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="item-content">
-                                <ul class="settings-list">
-                                    <li><a href="index.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-        <!-- Header Menu Area End Here -->
-        <!-- Page Area Start Here -->
-        <div class="dashboard-page-one">
-            <!-- Sidebar Area Start Here -->
-            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
-                <div class="mobile-sidebar-header d-md-none">
-                     <div class="header-logo">
-                         <a href="TeacherDashboard.html"><img src="img/logo1.png" alt="logo"></a>
-                     </div>
-                </div>
-                 <div class="sidebar-menu-content">
-                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
-                         <li class="nav-item ">
-                             <a href="TeacherDashboard.html" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
-                         </li>
-                         <li class="nav-item">
-                             <a href="TeacherCourses.html" class="nav-link"><i
-                                     class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>My Courses</span></a>
-                         </li>
-                         <!-- <li class="nav-item">
-                            <a href="TeacherDailyChallenges.html" class="nav-link"><i
-                                    class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Daily Challenges</span></a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a href="TeacherUniversityAffiliation.html" class="nav-link"><i
-                                    class="flaticon-script"></i><span>Affiliated Institutes</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="addAssessment.html" class="nav-link"><i
-                                    class="flaticon-script"></i><span>Add Assessment</span></a>
-                        </li>
-                         <li class="nav-item">
-                             <a href="TeacherNoticeBoard.html" class="nav-link"><i
-                                     class="flaticon-script"></i><span>Notice Board</span></a>
-                         </li>
-                        
-                     </ul>
-                 </div>
-             </div>
-            <!-- Sidebar Area End Here -->
-            <div class="dashboard-content-one">
-                <!-- Breadcubs Area Start Here -->
-                <div class="breadcrumbs-area">
-                    <h3>Courses</h3>
-                    <ul>
-                        <li>
-                            <a href="TeacherDashboard.html">Home</a>
-                        </li>
-                        <li>All Courses</li>
-                    </ul>
-                </div>
-                <!-- Breadcubs Area End Here -->
-                <!-- Class Table Area Start Here -->
-                <div class="card height-auto">
-                    <div class="card-body">
-                        <div class="heading-layout1">
-                            <div class="item-title">
-                                <h3>All Courses</h3>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table display data-table text-nowrap">
-                                <thead>
-                                    <tr>
-                                        <!-- <th>No #</th>
-                                        <th>CourseId</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Action</th> -->
-                                    </tr>
-                                </thead>
-                                <tbody id="teacherCoursesTableBody">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- Class Table Area End Here -->
-                <footer class="footer-wrap-layout1">
-                    <div class="copyright">© Copyrights <a href="https://cloudtekkies.com/index.html" target="_blank">Stepway</a> 2023. All rights reserved. Designed by <a href="#">Jameel & Waji</a></div>
-                </footer>
-            </div>
-        </div>
-        <!-- Page Area End Here -->
-    </div>
-    <!-- jquery-->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Scroll Up Js -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- Data Table Js -->
-    <script src="js/jquery.dataTables.min.js"></script>
-    <!-- Custom Js -->
-    <script src="js/main.js"></script>
-
+<body class="sw" data-view="enrolled">
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+<aside class="side">
+<a class="brand" href="frontPage.html" aria-label="Stepway home">
+<span class="brand-mark" aria-hidden="true">↗</span>stepway<span style="color:#7e9560">.</span>
+</a>
+<nav aria-label="Workspace">
+<a href="workspace.html" data-nav="overview">◫ &nbsp; Overview</a>
+<a href="workspace.html#goals" data-nav="goals">✓ &nbsp; Learning board</a>
+<a href="allCourses.html" data-nav="courses">▦ &nbsp; Explore courses</a>
+<a href="StudentNoticeBoard.html" data-nav="notices">▤ &nbsp; Noticeboard</a>
+</nav>
+<div class="side-note">
+<strong>Build a habit of progress.</strong>One practical goal at a time. Capture what you do, not just what you plan.</div>
+</aside>
+<div class="main-area">
+<header class="topbar">
+<span class="muted" id="workspace-label">Your learning workspace</span>
+<div class="identity">
+<span id="account-email">
+</span>
+<span class="avatar" id="avatar" aria-hidden="true">S</span>
+<button class="text-btn" id="signout">Sign out</button>
+</div>
+</header>
+<main class="workspace" id="main">
+<div class="page-heading">
+<div>
+<p class="eyebrow" id="role-label">WORKSPACE</p>
+<h1 id="page-title">Make your next step count.</h1>
+<p id="page-description">A clear view of your learning and the work ahead.</p>
+</div>
+<div class="actions">
+<button class="btn secondary small" id="refresh">Refresh</button>
+<button class="btn small" id="new-goal">+ New goal</button>
+</div>
+</div>
+<p id="status" class="status" role="alert">
+</p>
+<div id="overview-content">
+<section class="greeting">
+<div>
+<h2>Turn a little intention<br>into something you can show.</h2>
+<p>Set a practical goal, link your work, and see your progress take shape.</p>
+</div>
+<a href="#goals" class="btn">Plan your next step ↗</a>
+</section>
+<section class="stats" aria-label="Workspace summary">
+<div class="stat">
+<span id="metric-one-label">Enrolled courses</span>
+<strong id="metric-one">—</strong>
+<small id="metric-one-note">Your learning opportunities</small>
+</div>
+<div class="stat">
+<span>Goals in progress</span>
+<strong id="metric-active">—</strong>
+<small>Keep the momentum</small>
+</div>
+<div class="stat">
+<span>Completed goals</span>
+<strong id="metric-done">—</strong>
+<small>Self-reported progress</small>
+</div>
+<div class="stat">
+<span>Evidence attached</span>
+<strong id="metric-evidence">—</strong>
+<small>Completed goals with work linked</small>
+</div>
+</section>
+<div id="management" class="actions no-print">
+</div>
+</div>
+<section id="goals">
+<div class="section-head">
+<div>
+<h2>Your learning board</h2>
+<p>Keep your plans focused and your progress visible.</p>
+</div>
+<div class="actions">
+<button class="btn secondary small" id="export-report">Print progress summary ↗</button>
+</div>
+</div>
+<div class="progress-track" role="progressbar" aria-label="Completed learning goals" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="goal-progress">
+<div class="progress-fill" id="goal-progress-fill" style="width:0%">
+</div>
+</div>
+<p id="progress-caption" class="result-summary">Loading your goals…</p>
+<div id="goal-board" class="board">
+<div class="loading">Loading your learning board…</div>
+</div>
+<p class="report-note">Personal goals and evidence are self-reported. They are not verified qualifications or course completion certificates.</p>
+<p id="report-owner" class="print-only">
+</p>
+</section>
+<section id="courses-section">
+<div class="section-head">
+<div>
+<h2 id="courses-title">Explore your next opportunity</h2>
+<p>Find a course that fits what you want to learn.</p>
+</div>
+<input id="course-search" class="search" type="search" placeholder="Search courses…" aria-label="Search loaded courses by name or description">
+</div>
+<p id="course-count" class="result-summary">
+</p>
+<div id="course-list" class="cards">
+<div class="loading">Loading courses…</div>
+</div>
+<div class="actions no-print" style="margin-top:18px">
+<button class="btn secondary small" id="load-courses" hidden>Load more courses</button>
+</div>
+</section>
+<section id="notices-section">
+<div class="section-head">
+<div>
+<h2>From the community</h2>
+<p>Updates and announcements, all in one place.</p>
+</div>
+<a id="publish-notice" href="notice-board.html" class="btn secondary small" hidden>Manage notices ↗</a>
+</div>
+<div id="notice-list" class="panel">
+<div class="loading">Loading announcements…</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+<dialog id="goal-dialog" class="modal" aria-labelledby="goal-dialog-title">
+<div class="modal-head">
+<div>
+<p class="eyebrow">One step forward</p>
+<h2 id="goal-dialog-title">A goal worth working on.</h2>
+</div>
+<button class="text-btn" id="close-dialog" aria-label="Close goal editor">✕</button>
+</div>
+<form id="goal-form">
+<input id="goal-id" type="hidden">
+<div class="field">
+<label for="goal-title">What do you want to accomplish?</label>
+<input id="goal-title" maxlength="120" required placeholder="Build a REST API with automated tests">
+</div>
+<div class="field">
+<label for="goal-description">Your plan <span class="muted">(optional)</span>
+</label>
+<textarea id="goal-description" maxlength="2000" placeholder="Describe the next few practical steps…">
+</textarea>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="goal-skill">Skill focus</label>
+<input id="goal-skill" maxlength="60" placeholder="e.g. Software testing">
+</div>
+<div class="field">
+<label for="goal-due">Target date</label>
+<input id="goal-due" type="date">
+</div>
+</div>
+<div class="field">
+<label for="goal-status">Progress</label>
+<select id="goal-status">
+<option value="PLANNED">Planned</option>
+<option value="IN_PROGRESS">In progress</option>
+<option value="COMPLETED">Completed</option>
+</select>
+</div>
+<div class="field">
+<label for="goal-evidence">Evidence link <span class="muted">(optional)</span>
+</label>
+<input id="goal-evidence" type="url" maxlength="500" placeholder="https://github.com/you/your-project">
+<small class="muted">Link a project, repository, or write-up. Use HTTP or HTTPS.</small>
+</div>
+<p class="form-message" id="goal-error" role="alert">
+</p>
+<div class="actions">
+<button id="save-goal" class="btn" type="submit">Save goal</button>
+<button class="btn secondary" id="cancel-dialog" type="button">Cancel</button>
+</div>
+</form>
+</dialog>
+<script src="js/workspace.js">
+</script>
 </body>
-
-
-<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/all-class.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Oct 2023 17:31:02 GMT -->
 </html>

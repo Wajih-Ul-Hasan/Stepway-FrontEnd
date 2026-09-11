@@ -1,89 +1,53 @@
 <!doctype html>
-<html class="no-js" lang="">
-
-
-<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Oct 2023 17:30:44 GMT -->
+<html lang="en">
 <head>
-    <script src="js/config.js"></script>
-    <script src="js/api-config.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>STEPWAY | Login</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="fonts/flaticon.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Modernize js -->
-    <script src="js/login.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#235e46">
+<title>Welcome back · Stepway</title>
+<script src="js/config.js">
+</script>
+<script src="js/api-config.js">
+</script>
+<link rel="stylesheet" href="css/stepway.css">
 </head>
-<body>
-    <!-- Preloader Start Here -->
-    <div id="preloader"></div>
-    <!-- Preloader End Here -->
-    <!-- Login Page Start Here -->
-    <div class="login-page-wrap" style="overflow-y: auto;height: 100vh;">
-        <div class="login-page-content">
-            <div class="login-box" style="background-color: black; opacity: 78%;">
-                <div class="item-logo">
-                    <a href="frontPage.html">
-                        <img src="img/Stepway-logo.png" alt="logo" width="400px" height="400px"  >
-                    </a>
-                </div>
-                <form id="login-form" method="post" class="login-form">
-                    <div class="form-group">
-                        <label style="color: white;">Username</label>
-                        <input type="text" placeholder="Enter username" class="form-control" id="username"  style="color: white;">
-                        <i class="far fa-envelope"></i>
-                    </div>
-                    <div class="form-group">
-                        <label style="color: white;">Password</label>
-                        <input type="password" placeholder="Enter password" class="form-control" id="password" style="color: white;">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="form-group d-flex align-items-center justify-content-between">
-                        <a href="#" class="forgot-btn" style="color:rgb(173, 173, 3);">Forgot Password?</a>
-                    </div>
-                    <div class="form-group">
-                        <button type="button" class="login-btn" onclick="login()">Login</button>
-                    </div>
-                </form>
-                <div class="login-social">
-                    <div class="sign-up" style="color: rgb(255, 246, 246);">Don't have an account ?  <a href="signup3.html" style="color: rgb(255, 227, 66); text-decoration: underline; ">  SignUp</a> now!</div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    <!-- Login Page End Here -->
-    <!-- jquery-->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Scroll Up Js -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- Custom Js -->
-    <script src="js/main.js"></script>
-
+<body class="sw">
+<main class="auth">
+<aside class="auth-story">
+<a class="brand" href="frontPage.html" aria-label="Stepway home">
+<span class="brand-mark" aria-hidden="true">↗</span>stepway<span style="color:#7e9560">.</span>
+</a>
+<div>
+<p class="eyebrow">Learn. Build. Move forward.</p>
+<h1>Small steps.<br>Meaningful<br>possibilities.</h1>
+<p>A place to connect your learning with the work you want to do.</p>
+</div>
+<small>STEPWAY / YOUR LEARNING COMPANION</small>
+</aside>
+<section class="auth-main">
+<div class="auth-form">
+<p class="eyebrow">Your next step is waiting</p>
+<h2>Welcome back.</h2>
+<p class="muted">Sign in to pick up where you left off.</p>
+<form id="auth-form" data-mode="login">
+<div class="field">
+<label for="username">Email address</label>
+<input id="username" type="email" autocomplete="username" required placeholder="you@example.com">
+</div>
+<div class="field">
+<label for="password">Password</label>
+<input id="password" type="password" autocomplete="current-password" required placeholder="Enter your password">
+</div>
+<p id="auth-message" class="form-message" role="alert">
+</p>
+<button id="auth-submit" class="btn full" type="submit">Sign in →</button>
+</form>
+<p class="auth-bottom muted">New to Stepway? <a href="signup3.html">Create a student account</a>
+</p>
+</div>
+</section>
+</main>
+<script src="js/auth.js">
+</script>
 </body>
-
-
-<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Oct 2023 17:30:45 GMT -->
 </html>

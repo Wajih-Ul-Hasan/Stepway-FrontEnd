@@ -1,43 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <script src="js/config.js"></script>
-    <script src="js/api-config.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up - STEPWAY</title>
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/signupStyle.css">
-     <!-- JS -->
-     <script src="vendor/jquery/jquery.min.js"></script>
-     <script src="js/main1.js"></script>
-     <script src="js/addUser.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#235e46">
+<title>Start your journey · Stepway</title>
+<script src="js/config.js">
+</script>
+<script src="js/api-config.js">
+</script>
+<link rel="stylesheet" href="css/stepway.css">
 </head>
-<body>
-    <div class="main">
-        <div class="container">
-            <form  class="appointment-form" id="signupForm">
-                <h2>Sign Up StepWay</h2>
-                <div class="form-group-1">
-                    <input type="text" name="firstName" id="firstName" placeholder="FirstName" required />
-                    <input type="text" name="lastName" id="lastName" placeholder="LastName" required />
-                    <input type="email" name="email" id="email" placeholder="Email" required />
-                    <input type="password" name="password" id="password" placeholder="Password" required />
-                    <input type="text" name="gender" id="gender" placeholder="Gender" required />
-                    <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Phone number" required />
-                    <input type="hidden" name="role" id="role" value="ROLE_STUDENT" />
-                </div>
-                <div class="form-submit" >
-                    <button type="button" class="submit" onclick="submitForm()">SignUp</button>
-                </div>
-            </form>
-        </div>
-
-    </div>
-
-   
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+<body class="sw">
+<main class="auth">
+<aside class="auth-story">
+<a class="brand" href="frontPage.html" aria-label="Stepway home">
+<span class="brand-mark" aria-hidden="true">↗</span>stepway<span style="color:#7e9560">.</span>
+</a>
+<div>
+<p class="eyebrow">Learn. Build. Move forward.</p>
+<h1>Small steps.<br>Meaningful<br>possibilities.</h1>
+<p>A place to connect your learning with the work you want to do.</p>
+</div>
+<small>STEPWAY / YOUR LEARNING COMPANION</small>
+</aside>
+<section class="auth-main">
+<div class="auth-form">
+<p class="eyebrow">Make room for what's next</p>
+<h2>Start your journey.</h2>
+<p class="muted">Create a student account and take your first step.</p>
+<form id="auth-form" data-mode="signup">
+<div class="field-row">
+<div class="field">
+<label for="firstName">First name</label>
+<input id="firstName" autocomplete="given-name" maxlength="80" required>
+</div>
+<div class="field">
+<label for="lastName">Last name</label>
+<input id="lastName" autocomplete="family-name" maxlength="80" required>
+</div>
+</div>
+<div class="field">
+<label for="username">Email address</label>
+<input id="username" type="email" autocomplete="email" required>
+</div>
+<div class="field">
+<label for="password">Password</label>
+<input id="password" type="password" autocomplete="new-password" minlength="12" maxlength="64" required aria-describedby="password-hint">
+<small class="muted" id="password-hint">Use at least 12 characters.</small>
+</div>
+<p id="auth-message" class="form-message" role="alert">
+</p>
+<button id="auth-submit" class="btn full" type="submit">Create account →</button>
+</form>
+<p class="auth-bottom muted">Already have an account? <a href="index.html">Sign in</a>
+</p>
+</div>
+</section>
+</main>
+<script src="js/auth.js">
+</script>
+</body>
 </html>

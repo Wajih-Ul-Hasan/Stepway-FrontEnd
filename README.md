@@ -11,10 +11,11 @@ Static HTML/CSS/JavaScript. Node 22 is used only to prepare and check the deploy
 3. Set `STEPWAY_API_BASE_URL` to your backend's public HTTPS **origin**, e.g. `https://stepway-api.up.railway.app`. Do not include `/api`.
 4. Deploy. The build generates `public/js/config.js`; it refuses a missing/invalid URL.
 5. Set backend `CORS_ALLOWED_ORIGINS` to your Render origin, without a trailing slash, and redeploy the backend.
-6. Open `/index.html` to log in with the administrator configured by the backend's bootstrap variables. `/frontPage.html` is the landing page; `/signup3.html` registers students.
+6. Open `/index.html` to log in with the administrator configured by the backend's bootstrap variables. `/frontPage.html` is the landing page; `/signup3.html` registers students. Password reset links open `/reset-password.html`; email verification links open `/verify-email.html`.
 
 No global URL replacement is needed. Changing the hosting variable requires a new frontend build.
 Only the API's public origin belongs here; never put database credentials or JWT secrets in frontend variables.
+Set the backend `APP_FRONTEND_URL` to this same Render origin so SMTP verification and password reset emails point back to the deployed frontend.
 
 ## Local preview
 

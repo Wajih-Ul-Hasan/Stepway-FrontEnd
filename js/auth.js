@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!response.ok) throw new Error(signup ? 'Could not create your account. Check your details or try signing in if you already registered.' : 'Could not sign in. Check your email and password.');
             if (signup) {
                 form.reset(); message.style.color = 'var(--green)';
-                message.textContent = 'Your account is ready. You can now sign in.';
-                const link = document.createElement('a'); link.href = 'index.html'; link.textContent = ' Go to sign in →'; message.append(link);
+                message.textContent = 'Account created. Check your email to verify Stepway before signing in.';
             } else {
                 const data = await response.json();
                 if (typeof data.accessToken !== 'string') throw new Error('The server returned an invalid login response.');
